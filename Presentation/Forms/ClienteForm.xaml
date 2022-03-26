@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Presentation.Forms.ClienteForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Presentation.Forms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="856">
+    <Grid>
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="392" HorizontalAlignment="Center" Width="766" Margin="45,0">
+            <Grid>
+                <Separator Background="LightGray" Margin="10,35,10,316"/>
+                <materialDesign:PackIcon Kind="Users" Margin="8,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
+                <Label x:Name="TitleLabel" Content="DATOS DEL CLIENTE" Margin="32,2,0,341" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <Ellipse Margin="32,70,619,210" HorizontalAlignment="Center" Width="99">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="ImagenBrush"  RenderOptions.BitmapScalingMode="HighQuality" ImageSource="/Resources/imgDefaultUser.png" Stretch="Fill"></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBox x:Name="ApodoTextBox" materialDesign:HintAssist.Hint="Usuario" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="174,70,395,266" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <PasswordBox x:Name="PinTextBox" materialDesign:HintAssist.Hint="Pin" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="174,132,395,204" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <TextBox x:Name="NombreTextBox" materialDesign:HintAssist.Hint="Nombre" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="389,70,207,266" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <TextBox x:Name="APaternoTextBox" materialDesign:HintAssist.Hint="Apellido Paterno" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="565,70,32,266" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f"/>
+                <TextBox x:Name="AMaternoTextBox" materialDesign:HintAssist.Hint="Apellido Materno" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="389,132,207,204" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f"/>
+                <TextBox x:Name="CorreoTextBox" materialDesign:HintAssist.Hint="Correo" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="389,194,207,142" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f"/>
+                <ComboBox x:Name="GeneroCombox" materialDesign:HintAssist.Hint="Genero" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="565,132,31,204" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" Height="40"/>
+                <Button x:Name="SubirImagenBtn" Style="{StaticResource MaterialDesignRaisedButton}" Margin="32,185,619,165" FontFamily="Global User Interface" Height="Auto" RenderTransformOrigin="0.5,0.5" Content="Subir" Foreground="White" Click="SubirImagenBtn_Click" FontSize="14"/>
+                <Button x:Name="GuardarBtn" Content="GUARDAR" Style="{StaticResource MaterialDesignRaisedButton}" Margin="604,295,32,41" FontFamily="Global User Interface" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Foreground="White" Click="GuardarBtn_Click" FontSize="16"/>
+                <Button x:Name="CancelarBtn" Style="{StaticResource MaterialDesignOutlinedButton}" Content="CANCELAR" FontFamily="Global User Interface" BorderBrush="#FF1F1F1F" Margin="476,295,160,41" Height="Auto" FontSize="16" Click="CancelarBtn_Click"/>
+                <Rectangle Fill="#e7e7e7" Margin="565,194,31,142"/>
+                <DatePicker x:Name="FNacimientoPicker" materialDesign:HintAssist.Hint="Fecha de nacimiento" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="565,194,32,142" Height="40" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <TextBox x:Name="PesoTextBox" materialDesign:HintAssist.Hint="Peso" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="174,194,496,142" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <TextBox x:Name="EstaturaTextBox" materialDesign:HintAssist.Hint="Estatura" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="271,194,395,142" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

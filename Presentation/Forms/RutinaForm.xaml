@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Presentation.Forms.RutinaForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Presentation.Forms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="856">
+    <Grid>
+        <materialDesign:Card Background="White" Padding="8" UniformCornerRadius="3" Height="450" HorizontalAlignment="Center" Width="856">
+            <Grid>
+                <Separator Background="LightGray" Margin="10,35,10,369"/>
+                <materialDesign:PackIcon Kind="Clock" Margin="8,8,0,0" Height="20" Width="24" HorizontalAlignment="Left" />
+                <Label x:Name="TitleLabel" Content="DATOS DE LA RUTINA" Margin="32,2,0,399" Foreground="#1f1f1f" FontSize="20" FontFamily="Global User Interface"/>
+                <TextBox x:Name="RepeticionesTextBox" materialDesign:HintAssist.Hint="Total de repeticiones" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10,308,659,86" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <TextBox x:Name="PesoTextBox" materialDesign:HintAssist.Hint="Peso (si aplica)" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="211,308,488,86" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" />
+                <ComboBox x:Name="DiaCombox" materialDesign:HintAssist.Hint="Dia" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="679,70,23,324" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" Height="40"/>
+                <ComboBox x:Name="ClienteCombox" materialDesign:HintAssist.Hint="Cliente" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="376,70,178,324" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" Height="40" SelectionChanged="ClienteCombox_SelectionChanged"/>
+                <Button x:Name="GuardarBtn" Content="GUARDAR" Style="{StaticResource MaterialDesignRaisedButton}" Margin="679,371,23,23" FontFamily="Global User Interface" IsDefault="True" Height="Auto" RenderTransformOrigin="0.5,0.5" Foreground="White" Click="GuardarBtn_Click" FontSize="16"/>
+                <Button x:Name="CancelarBtn" Style="{StaticResource MaterialDesignOutlinedButton}" Content="CANCELAR" FontFamily="Global User Interface" BorderBrush="#FF1F1F1F" Margin="523,370,179,24" Height="Auto" FontSize="16" Click="CancelarBtn_Click"/>
+                <GroupBox Header="Datos del ejercicio" Margin="9,115,488,131" FontFamily="Global User Interface" FontSize="14" Padding="10">
+                    <DataGrid x:Name="EjercicioDataGrid" Margin="0,0,0,-5" HorizontalAlignment="Left" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" Width="322" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" FontFamily="Global User Interface"/>
+                            <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" FontFamily="Global User Interface"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+                <ComboBox x:Name="EjercicioCombox" materialDesign:HintAssist.Hint="Ejercicio" BorderBrush="{StaticResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="10,70,488,324" FontFamily="Global User Interface" FontSize="16" Background="#e7e7e7" Foreground="#1f1f1f" Height="40" SelectionChanged="EjercicioCombox_SelectionChanged"/>
+                <GroupBox Header="Datos del cliente" Margin="376,115,178,131" FontFamily="Global User Interface" FontSize="14" Padding="10">
+                    <DataGrid x:Name="ClienteDataGrid" Margin="0,0,0,-5" HorizontalAlignment="Left" CanUserSortColumns="True" CanUserAddRows="False" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Background="White" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" BorderThickness="0" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEFF3F8" Width="262" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" FontFamily="Global User Interface"/>
+                            <DataGridTextColumn Header="APaterno" Binding="{Binding ApellidoPaterno}" FontFamily="Global User Interface"/>
+                            <DataGridTextColumn Header="Genero" Binding="{Binding Genero}" FontFamily="Global User Interface"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>
