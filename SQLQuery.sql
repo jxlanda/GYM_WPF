@@ -64,14 +64,6 @@ CREATE TABLE Rutina
 	CONSTRAINT clienterutina_fkey FOREIGN KEY (cliente_id) REFERENCES Cliente(id)
 )
 
--- DROPS
-
-DROP TABLE Cliente
-DROP TABLE Usuario
-DROP TABLE TipoUsuario
-DROP TABLE Rutina
-DROP TABLE Ejercicio
-
 -- INSERTS
 
 INSERT INTO TipoUsuario VALUES 
@@ -79,14 +71,4 @@ INSERT INTO TipoUsuario VALUES
 ('Entrenador','E')
 
 INSERT INTO Usuario VALUES 
-('Usuario2', 'APaterno', 'AMaterno','root','1234','C:\Users\cueva\Downloads\user.jpg','correo@outlook.com','6645109193','M',1)
-
-
---SELECTS
-
-SELECT Usuario.id, Usuario.nombre, apaterno, amaterno, apodo, pin, imgpath, correo, TipoUsuario.id, TipoUsuario.nombre, tipousuario FROM Usuario
-	   INNER JOIN TipoUsuario ON Usuario.tipousuario_id = TipoUsuario.id 
-
-SELECT Rutina.id, dia, repeticiones, Rutina.peso, Ejercicio.id, Ejercicio.nombre, Ejercicio.descripcion, Cliente.id, Cliente.nombre FROM Rutina
-	   INNER JOIN Ejercicio ON Rutina.ejercicio_id = Ejercicio.id
-	   INNER JOIN Cliente ON Rutina.cliente_id = Cliente.id
+('Usuario2', 'APaterno', 'AMaterno','root','1234', 'C:\user.jpg', 'correo@outlook.com','6645314807','M',1)
