@@ -14,7 +14,7 @@ Consiste en una plataforma de escritorio desarrollada en Windows Presentation Fo
 
 ## :pushpin: Requisitos
  - **SQL Server 2019:** Es nesesario ejecutar el archivo [SQL QUERY](/SQLQuery.sql) para la creación de la base de datos.
- - **Sistema opereativo Windows 8:** Sistema operativo basado en Windows, versión 8 o superior.
+ - **Sistema operativo Windows:** Sistema operativo basado en Windows, versión 8 o superior.
 
 
 _____
